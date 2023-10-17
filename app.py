@@ -5,6 +5,7 @@ app = Flask(__name__)
 @app.route('/', methods=['POST'])
 def strlen():
     data = request.json
+    print(data)
     string = data.get("input", "")
     count = len(string)
     return jsonify({"length": count})
