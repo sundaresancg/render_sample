@@ -6,7 +6,7 @@ app = Flask(__name__)
 def strlen():
     data = request.json
     print(data)
-    string = data.get("input", "")
+    string = data.get("input")
     count = len(string)
     return jsonify({"length": count})
 
